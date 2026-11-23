@@ -203,11 +203,13 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
 }
-.sw-hero .swiper-slide a {
-  position: absolute;
-  left: 48px;
-  bottom: 48px;
-  width: 630px;
+.sw-hero .swiper-slide a strong {
+  display: block;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 40px
+}
   /* z-index: 5; */
 }
 .sw-hero .swiper-slide a strong {
@@ -217,21 +219,29 @@ button:focus-visible {
   line-height: 1.2;
   color: #fff;
 }
-.sw-hero .swiper-slide a em {
-  display: block;
-  font-size: 20px;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.75);
-}
-.sw-hero .swiper-slide a .view {
+.sw-hero .swiper-slide a .view{
   display: inline-flex;
-  /* width: fit-content; */
-  align-items: center;
-  gap: 3px;
-  height: 32px;
+  /* width fit-content; */
+  align-item: center;
+  gap; 3px
+  height: 32px
+  padding: 0 16px;
   font-size: 14px;
   color: #fff;
+  border-radius:31px;
 }
+.sw-hero .swiper-slide a .view .rt{
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+}
+.sw-hero .swiper-slide a .view svg{
+ width: 100%;
+ height: 100%;
+}
+.sw-hero .swiper-slide a .view svg {
+  stroke:currentColor;
+  
 /* main styling end */
 
 
