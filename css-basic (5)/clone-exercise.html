@@ -6,6 +6,8 @@
     <title>대한민국 구석구석 클론코딩</title>
 
     <link rel="stylesheet" href="css/reset.css" />
+    <!-- 디자인 토큰(CSS 변수): 다른 CSS보다 먼저 연결 -->
+    <link rel="stylesheet" href="css/tokens.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -21,7 +23,7 @@
         <!-- inner box -->
         <div class="inner">
           <!-- logo -->
-          <h1>
+          <h1 class="logo">
             <a href="#">
               <img src="assets/images/logo_big.png" alt="대한민국 구석구석" />
             </a>
@@ -29,52 +31,23 @@
 
           <!-- navigation -->
           <nav class="nav">
-            <class="depth1-wrap">
-              <li class="depth1-travel"></li>
-              <a href="#"class="depth1-btn">여행</a>
+            <ul class="depth1-wrap">
+              <li class="depth1-travel">
+                <a href="#" class="depth1-btn">
+                  여행
+                  <span class="icon-pg-chevron-md">
+                    <img
+                      src="assets/icons/guide_chevron_dw24.svg"
+                      alt="다운 아이콘"
+                    />
+                  </span>
+                </a>
                 <!-- depth2 -->
                 <div class="depth2-wrap" id="depth2-1">
-                </div>
-              </li>
-              <li class="depth1-rec"></li>
-                <a href="#" class1="depth1-btn">추천</a>
-                <!-- depth2 -->
-                <div class="depth2-wrap" id="depth2-2">
-                </div>
-              </li>
                   <!-- inner -->
                   <div>
                     <!-- sub1 -->
                     <div>
-              </li>
-              <li class="depth-theme"
-              <a href="#">테마</a>
-                <!-- depth2 -->
-                <div>
-                  <!-- inner -->
-                  <div>
-                    <!-- sub1 -->
-                    <div>
-              </li>
-              <li class="depth1-area"
-              <a href="#">지역</a>
-                <!-- depth2 -->
-                <div>
-                  <!-- inner -->
-                  <div>
-                    <!-- sub1 -->
-                    <div>
-              </li>
-              <li class="add-type"
-              </li>
-              <a href="#">추가</a>
-                <!-- depth2 -->
-                <div>
-                  <!-- inner -->
-                  <div>
-                    <!-- sub1 -->
-                    <div>
-              </li>
                       <button>여행 정보</button>
                       <!-- depth3 -->
                       <div>
@@ -105,10 +78,21 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#">추천</a>
+              <li class="depth1-rec">
+                <a href="#" class="depth1-btn">
+                  추천
+                  <span class="icon-pg-ai">
+                    <img src="assets/icons/text_ai15.svg" alt="AI 아이콘" />
+                  </span>
+                  <span class="icon-pg-chevron-md">
+                    <img
+                      src="assets/icons/guide_chevron_dw24.svg"
+                      alt="다운 아이콘"
+                    />
+                  </span>
+                </a>
                 <!-- depth2 -->
-                <div>
+                <div class="depth2-wrap" id="depth2-2">
                   <!-- sub-1 -->
                   <div>
                     <a href="#">AI콕콕</a>
@@ -119,26 +103,81 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="depth1-theme">
                 <a href="#">테마</a>
               </li>
-              <li>
+              <li class="depth1-area">
                 <a href="#">지역</a>
               </li>
-              <li>
+              <li class="add-type">
                 <a href="#">디지털관광주민증</a>
               </li>
             </ul>
           </nav>
 
           <!-- utils -->
-          <div>
-            <button>검색</button>
-            <div>
-              <a href="#">이용 가이드</a>
-              <button>로그인</button>
-              <a href="#">여행지도</a>
-              <div>언어선택</div>
+          <div class="header-util">
+            <button class="icon-pg btn-search" aria-label="검색">
+              <img src="assets/icons/guide_search24.svg" alt="검색 아이콘" />
+            </button>
+            <div class="util-sub">
+              <a href="#" aria-label="이용 가이드" class="icon-pg btn-guide">
+                <img
+                  src="assets/icons/menu_info20.svg"
+                  alt="이용 가이드 아이콘"
+                />
+              </a>
+              <button aria-label="로그인" class="icon-pg btn-login profile">
+                <img src="assets/icons/login24.svg" alt="로그인 아이콘" />
+              </button>
+              <a href="#" aria-label="여행지도" class="icon-pg btn-map">
+                <img src="assets/icons/travelmap24.svg" alt="여행지도 아이콘" />
+              </a>
+              <div class="language-wrap">
+                <button aria-label="언어선택">
+                  <span class="icon-pg btn-lang">
+                    <img src="assets/icons/lanquage20.svg" alt="언어 아이콘" />
+                  </span>
+                  <span class="language">한국어</span>
+                  <span class="icon-pg-chevron-sm">
+                    <img
+                      src="assets/icons/guide_chevron_dw24.svg"
+                      alt="다운 아이콘"
+                    />
+                  </span>
+                </button>
+                <div class="language-layer">
+                  <ul>
+                    <li>
+                      <a href="#">한국어</a>
+                    </li>
+                    <li>
+                      <a href="#">English</a>
+                    </li>
+                    <li>
+                      <a href="#">日本語</a>
+                    </li>
+                    <li>
+                      <a href="#">中文 ( 简体 )</a>
+                    </li>
+                    <li>
+                      <a href="#">中文 ( 繁體 )</a>
+                    </li>
+                    <li>
+                      <a href="#">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="#">Français</a>
+                    </li>
+                    <li>
+                      <a href="#">Español</a>
+                    </li>
+                    <li>
+                      <a href="#">Pусский</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -146,137 +185,206 @@
 
       <!-- main -->
       <main class="main">
-        <!-- 히어로 영역 -->
-        <section>
-          <!-- 히어로 영역 하단 이미지 -->
-          <div>
-            <img src="assets/images/hero_bg.png" alt="히어로 배경" />
-          </div>
-          <!-- 히어로 콘텐츠 -->
-          <div>
-            <!-- section title -->
-            <div>
-              <div>
-                <div>여행가는 달 캠페인</div>
-                <h2>
-                  <a href="#">
-                    가을 깊게, <br />
-                    여행은 가볍게
-                    <span>바로가기 아이콘</span>
-                  </a>
-                </h2>
-                <p>
-                  설레는 가을 여행, 풍성한 혜택이 가득한<br />
-                  여행가는 달 캠페인과 함께 떠나보세요
-                </p>
-                <span>2026. 9. 15. ~ 2026. 11. 30.</span>
-                <div>
-                  <button>
-                    <span>가을 맞이 여행 할인</span>
-                  </button>
-                  <button>
-                    <span>가을 맞이 여행 콘텐츠</span>
-                  </button>
-                </div>
+        <!-- 히어로 영역 (2026-11-20 원본 기준, docs/hero-reference.md 참고) -->
+        <!-- 히어로 영역 (2026-11-20 원본 기준, docs/reference/hero.md 참고) -->
+        <section class="hero-sec">
+          <!-- Swiper 라이브러리 사용예정, 클래스네임 바뀔수도 있음 -->
+          <div class="swiper sw-hero">
+            <!-- 카드 묶음: 이전 · 현재 · 다음 3장만 (원본은 10장) -->
+            <div class="swiper-wrapper">
+              <!-- 이전 카드 (일부만 보임) -->
+              <div class="swiper-slide">
+                <span class="hero-img">
+                  <img src="assets/images/hero_img_1_2.png" alt="" />
+                </span>
+                <a href="#">
+                  <strong>머물기만 해도 쉼이 되는 곳</strong>
+                  <em>해남에서 만나는 정원 속 여유</em>
+                  <span class="view">
+                    자세히 보기
+                    <img src="assets/icons/guide_chevron_dw24.svg" alt="" />
+                    <!-- guide_chevron_dw24.svg -->
+                    <span class="icon-pg-chevron-sm rt">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 9L12 16L5 9"
+                          stroke="#3D3D43"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- 현재 카드 (가운데) -->
+              <div class="swiper-slide swiper-slide-active">
+                <span class="hero-img">
+                  <img src="assets/images/hero_img_1_1.png" alt="" />
+                </span>
+                <a href="#">
+                  <strong>
+                    수능 스트레스를 날려버릴<br />
+                    전국 테마파크 &amp; 할인여행지 모음.zip
+                  </strong>
+                  <em>수험생 한정 할인 혜택&amp;선착순 선물까지!</em>
+                  <span class="view">
+                    자세히 보기
+                    <img src="assets/icons/guide_chevron_dw24.svg" alt="" />
+                    <!-- guide_chevron_dw24.svg -->
+                    <span class="icon-pg-chevron-sm rt">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 9L12 16L5 9"
+                          stroke="#3D3D43"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- 다음 카드 (일부만 보임) -->
+              <div class="swiper-slide">
+                <span class="hero-img">
+                  <img src="assets/images/hero_img_1_3.png" alt="" />
+                </span>
+                <a href="#">
+                  <strong>방한 외국인 관광객 2,000만 명 돌파!</strong>
+                  <em>대한민국 관광이 새로운 역사를 썼습니다</em>
+                  <span class="view">
+                    자세히 보기
+                    <img src="assets/icons/guide_chevron_dw24.svg" alt="" />
+                    <!-- guide_chevron_dw24.svg -->
+                    <span class="icon-pg-chevron-sm rt">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 9L12 16L5 9"
+                          stroke="#3D3D43"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
-            <!-- images slide -->
-            <div>
-              <!-- blind 가을 맞이 여행 콘텐츠 -->
-              <h3>가을 맞이 여행 할인</h3>
-              <div>
-                <!-- Swiper slide -->
-                <div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_1.png"
-                        alt="전국 어디든 알뜰하게! 여행가는 달에 열차타고 떠나보세요"
+
+            <!-- 이전 / 다음 버튼 -->
+            <div class="nav-btn">
+              <div class="swiper-button-prev">
+                <button aria-label="이전 슬라이드">
+                  <img src="assets/icons/guide_chevron_dw24.svg" alt="" />
+                <button class="btn-pg-icon-full-lg" aria-label="이전 슬라이드">
+                  <!-- guide_arrow_right24.svg -->
+                  <span class="icon-pg-arwright-lg lt">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12L19 12"
+                        stroke="#3D3D43"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_2.png"
-                        alt="네이버 항공권에서 국내선 이용하고 혜택도 받아보세요!"
+                      <path
+                        d="M12 5L19 12L12 19"
+                        stroke="#3D3D43"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_3.png"
-                        alt="티맵에서 친환경 및 안전운전 서약하고, 특별한 여행 혜택을 만나보세요"
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="swiper-button-next">
+                <button aria-label="다음 슬라이드">
+                  <img src="assets/icons/guide_chevron_dw24.svg" alt="" />
+                <button class="btn-pg-icon-full-lg" aria-label="다음 슬라이드">
+                  <!-- guide_arrow_right24.svg -->
+                  <span class="icon-pg-arwright-lg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12L19 12"
+                        stroke="#3D3D43"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_4.png"
-                        alt="연안지역 여행, 렌터카 할인으로 더 가볍게!  카모아에서 확인하세요!"
+                      <path
+                        d="M12 5L19 12L12 19"
+                        stroke="#3D3D43"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_5.png"
-                        alt="여행도 하고, 혜택도 받고, 지역에 활력도 더하는 의미있는 여행을 떠나보세요"
-                      />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_6.png"
-                        alt="국내 숙박 최대 2~7만원 할인! 역대급 숙박을 확인하세요!"
-                      />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_7.png"
-                        alt="대한민국 구석구석 다양한 여행상품을 최대 50% 할인된 가격으로 이용해 보세요!"
-                      />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_8.png"
-                        alt="교통부터 관광지 할인까지, 지역 곳곳 다양한 여행 할인혜택을 확인하세요"
-                      />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <img
-                        src="assets/images/hero_img_1_9.png"
-                        alt="소도시 여행 최대 30% 할인! 지역관광 부스터 로 떠나보세요."
-                      />
-                    </a>
-                  </div>
-                </div>
-                <!-- pagination -->
-                <div>
-                  <!-- 이전 버튼 -->
-                  <div>
-                    <button>이전</button>
-                  </div>
-                  <!-- 다음 버튼 -->
-                  <div>
-                    <button>다음</button>
-                  </div>
-                  <!-- page -->
-                  <div>1 / 9</div>
-                  <button>
-                    <span>일시정지</span>
-                    <span>재생</span>
-                  </button>
-                </div>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 페이지 표시 + 일시정지 -->
+            <div class="page-btn">
+              <div class="swiper-pagination swiper-pagination-fraction">
+                <span class="swiper-pagination-current">1</span>
+                /
+                <span class="swiper-pagination-total">10</span>
+              </div>
+
+              <div class="rolling">
+                <button class="icon-pg-play" aria-label="일시정지">
+                  <span class="stop">
+                    <img
+                      src="assets/icons/guide_stop24.svg"
+                      alt="일시정지 아이콘"
+                    />
+                  </span>
+                  <span class="play">
+                    <img
+                      src="assets/icons/guide_play24.svg"
+                      alt="재생 아이콘"
+                    />
+                  </span>
+                </button>
               </div>
             </div>
           </div>
