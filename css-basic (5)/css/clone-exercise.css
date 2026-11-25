@@ -448,6 +448,11 @@ button:focus-visible {
   stroke: currentColor;
 }
 .sw-ai .swiper-slide .cont .tit {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  
+
 }
 .sw-ai .swiper-slide .cont .tit strong {
 }

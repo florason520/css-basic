@@ -24,6 +24,8 @@
   --color-white-50: rgba(255, 255, 255, 0.5); /* 사진 위 얇은 테두리 */
   --color-black-40: rgba(0, 0, 0, 0.4); /* 사진 위 원형 버튼 배경 */
   --color-focus: #000; /* 키보드 포커스 테두리 */
+  --color-primary-50: #234cf6; /* 버튼, 링크, 메뉴 등 */
+  --color-primary-strong: #0a2bff; /* 버튼, 링크,
 
   /* ---------- 글꼴 (font) ---------- */
   --font-base:
